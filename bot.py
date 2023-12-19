@@ -413,7 +413,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("Support Group", url="https://t.me/+ZSUTmOXuwqxlODk1")
                     ],
                     [
-                        InlineKeyboardButton("Auto Group", url="https://t.me/+CZH0JaSwih44ZTM1") 
+                        InlineKeyboardButton("Auto Group", url="https://t.me/+CZH0JaSwih44ZTM1"),
                         InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
                     ]
                 ]
