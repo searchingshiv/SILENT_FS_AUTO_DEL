@@ -78,7 +78,7 @@ async def start(bot: Client, cmd: Message):
                     ],
                     [
                         InlineKeyboardButton("Support Group", url="https://t.me/+ZSUTmOXuwqxlODk1"),
-                        InlineKeyboardButton("Auto Group", url="https://t.me/+CZH0JaSwih44ZTM1""),
+                        InlineKeyboardButton("Auto Group", url="https://t.me/+CZH0JaSwih44ZTM1"),
                         
                     ],
                     [
