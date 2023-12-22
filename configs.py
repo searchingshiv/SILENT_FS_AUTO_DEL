@@ -12,7 +12,7 @@ class Config(object):
   DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")
   UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "https://t.me/The_Silent_Teams")
   LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001983863101"))
-  BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
+  BANNED_USERS = int(x) for x in os.environ.get("BANNED_USERS", "").split())
   FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
   BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "").split()))
