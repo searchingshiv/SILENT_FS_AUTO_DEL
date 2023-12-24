@@ -103,6 +103,7 @@ async def start(bot: Client, cmd: Message):
                     disable_web_page_preview=True
                 )
             else:
+                text=""
                 message_ids.append(int(GetMessage.id))
             for i in range(len(message_ids)):
                 await send_media_and_reply(bot, user_id=cmd.from_user.id, file_id=int(message_ids[i]), text=text)
