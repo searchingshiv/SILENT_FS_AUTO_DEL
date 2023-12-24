@@ -16,12 +16,12 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
         await asyncio.sleep(e.value)
         return await media_forward(bot, user_id, file_id)
 
-async def send_media_and_reply(bot: Client, user_id: int, file_id: int, message: Message):
+async def send_media_and_reply(bot: Client, user_id: int, file_id: int):
     sent_message = await media_forward(bot, user_id, file_id)
-    text = await bot.send_message(message.chat.id, "[𝐅𝐢𝐥𝐞𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐢𝐧 𝟑𝟎 𝐦𝐢𝐧𝐮𝐭𝐞𝐬](https://telegram.me/The_Silent_Teams)", disable_web_page_preview=True)
     asyncio.create_task(delete_after_delay(sent_message, 60, text))
 
 async def delete_after_delay(message, delay, text):
+    text = await bot.send_message(message.chat.id, "[𝐅𝐢𝐥𝐞𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐢𝐧 𝟑𝟎 𝐦𝐢𝐧𝐮𝐭𝐞𝐬](https://t.me/The_Silent_Teams)", disable_web_page_preview=True)
     await asyncio.sleep(delay)
     await message.delete()
     await text.delete()
