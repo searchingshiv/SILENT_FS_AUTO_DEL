@@ -103,7 +103,7 @@ async def start(bot: Client, cmd: Message):
                     disable_web_page_preview=True
                 )
             else:
-                text=""
+                text = await bot.send_message(sent_message.chat.id, "[𝐅𝐢𝐥𝐞𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐢𝐧 𝟑𝟎 𝐦𝐢𝐧𝐮𝐭𝐞𝐬](https://t.me/The_Silent_Teams)", disable_web_page_preview=True)
                 message_ids.append(int(GetMessage.id))
             for i in range(len(message_ids)):
                 await send_media_and_reply(bot, user_id=cmd.from_user.id, file_id=int(message_ids[i]), text=text)
