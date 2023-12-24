@@ -123,7 +123,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [𝐎𝐰𝐧𝐞𝐫](https://t.me/searchingshiv)",
                                      disable_web_page_preview=True)
             return
 
