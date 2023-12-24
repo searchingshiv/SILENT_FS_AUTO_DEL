@@ -20,7 +20,5 @@ async def handle_user_status(bot, cmd):
                 datetime.date.today() - datetime.date.fromisoformat(ban_status["banned_on"])
         ).days > ban_status["ban_duration"]:
             await db.remove_ban(chat_id)
-        else:
-            await cmd.reply_text("You R Banned!.. Contact @THE_DS_OFFICIAL 😝", quote=True)
-            return
+
     await cmd.continue_propagation()
