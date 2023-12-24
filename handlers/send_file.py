@@ -18,7 +18,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
 
 async def send_media_and_reply(bot: Client, user_id: int, file_id: int, message: Message):
     sent_message = await media_forward(bot, user_id, file_id)
-    text = await bot.send_message(message.chat.id, "[𝐅𝐢𝐥𝐞𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐢𝐧 𝟑𝟎 𝐦𝐢𝐧𝐮𝐭𝐞𝐬](https://t.me/The_Silent_Teams)")
+    await send_text_and_reply(bot, user_id=cmd.from_user.id, text="[𝐅𝐢𝐥𝐞𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐢𝐧 𝟑𝟎 𝐦𝐢𝐧𝐮𝐭𝐞𝐬](https://t.me/The_Silent_Teams)", message=cmd)
     asyncio.create_task(delete_after_delay(sent_message, 60, text))
 
 async def delete_after_delay(message, delay, text):
