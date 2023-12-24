@@ -109,7 +109,7 @@ async def start(bot: Client, cmd: Message):
 
             ttext = await bot.send_message(chat_id=cmd.from_user.id, text="[𝐅𝐢𝐥𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐢𝐧 𝟑𝟎 𝐦𝐢𝐧𝐮𝐭𝐞𝐬](https://t.me/The_Silent_Teams)", disable_web_page_preview=True)
             await asyncio.sleep(60)
-            await text.delete()
+            await ttext.delete()
         except Exception as err:
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
 
