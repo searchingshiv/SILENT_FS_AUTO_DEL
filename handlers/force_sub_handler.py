@@ -56,11 +56,4 @@ async def handle_force_sub(bot: Client, cmd: Message):
             )
         )
         return 400
-    except Exception:
-        await bot.send_message(
-            chat_id=cmd.from_user.id,
-            text="[𝐅𝐢𝐥𝐞𝐬 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐢𝐧 𝟑𝟎 𝐦𝐢𝐧𝐮𝐭𝐞𝐬](https://t.me/The_Silent_Teams)",
-            disable_web_page_preview=True
-        )
-        return 200
     return 200
